@@ -8,29 +8,28 @@ graph TB
         subgraph NODE["node01.udl.tf"]
             SHARED["Shared TF2 Installation<br/>(Host Mount Point)"]
 
+            RESTART["Restart Controller<br/>(CronJob: Daily at 04:00)"]
+            UPDATE["Update Controller<br/>(CronJob: Every 30 min)"]
+
             subgraph SERVER1["UDL.TF | EU | Advanced"]
                 POD1["Custom TF2 Image"]
-                RESTART1["Restart Controller<br/>(Daily at 04:00)"]
-                UPDATE1["Update Controller<br/>(Every 30 min)"]
-                POD1 --> RESTART1
-                POD1 --> UPDATE1
             end
 
             subgraph SERVER2["UDL.TF | EU | Advanced #2"]
                 POD2["Custom TF2 Image"]
-                RESTART2["Restart Controller<br/>(Daily at 04:00)"]
-                UPDATE2["Update Controller<br/>(Every 30 min)"]
-                POD2 --> RESTART2
-                POD2 --> UPDATE2
             end
 
             subgraph SERVER3["UDL.TF | EU | Normal"]
                 POD3["Custom TF2 Image"]
-                RESTART3["Restart Controller<br/>(Daily at 04:00)"]
-                UPDATE3["Update Controller<br/>(Every 30 min)"]
-                POD3 --> RESTART3
-                POD3 --> UPDATE3
             end
+
+            RESTART -->|Manages| POD1
+            RESTART -->|Manages| POD2
+            RESTART -->|Manages| POD3
+
+            UPDATE -->|Manages| POD1
+            UPDATE -->|Manages| POD2
+            UPDATE -->|Manages| POD3
 
             POD1 -.->|Mount| SHARED
             POD2 -.->|Mount| SHARED
@@ -41,6 +40,8 @@ graph TB
     style SHARED fill:#1a4d2e,stroke:#4ade80,stroke-width:2px,color:#fff
     style NODE fill:#1e293b,stroke:#64748b,stroke-width:2px,color:#fff
     style K8S fill:#1e3a8a,stroke:#60a5fa,stroke-width:2px,color:#fff
+    style RESTART fill:#7c2d12,stroke:#fb923c,stroke-width:2px,color:#fff
+    style UPDATE fill:#581c87,stroke:#c084fc,stroke-width:2px,color:#fff
 ```
 
 ## Components
@@ -58,10 +59,10 @@ All TF2 servers mount to the same host installation for:
 
 ### Controllers
 
-Each server runs two CronJob controllers:
+Two CronJob controllers manage all servers:
 
-- **Restart Controller**: Automatically restarts servers daily at 04:00
-- **Update Controller**: Checks for game updates every 30 minutes
+- **Restart Controller**: Automatically restarts all servers daily at 04:00
+- **Update Controller**: Checks for game updates every 30 minutes and updates all servers as needed
 
 ### Active Servers
 
