@@ -8,13 +8,6 @@ flowchart LR
     A --> D[Community Managers]
     A --> E[Product Managers]
     A --> F[Server Managers]
-
-    style A fill:#e1f5ff
-    style B fill:#f0f0f0
-    style C fill:#f0f0f0
-    style D fill:#f0f0f0
-    style E fill:#f0f0f0
-    style F fill:#f0f0f0
 ```
 
 ## Roles
