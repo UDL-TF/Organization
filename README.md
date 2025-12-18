@@ -20,3 +20,7 @@ flowchart LR
 | [Community Managers](./roles/community-managers.md) | Engage with and grow the community                                       |
 | [Product Managers](./roles/product-managers.md)     | Define product strategy and roadmap                                      |
 | [Server Managers](./roles/server-managers.md)       | Maintain server infrastructure and performance                           |
+
+---
+
+[View Infrastructure Documentation](./infrastructure/overview.md)
