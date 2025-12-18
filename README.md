@@ -1,19 +1,20 @@
 # UDL Organization Chart
 
 ```mermaid
-graph TD
+flowchart LR
     A[Owners]
-    B[Staff]
-    C[Developers]
-    D[Community Managers]
-    E[Product Managers]
-    F[Server Managers]
+    A --> B[Staff]
+    A --> C[Developers]
+    A --> D[Community Managers]
+    A --> E[Product Managers]
+    A --> F[Server Managers]
 
-    A --> B
-    A --> C
-    A --> D
-    A --> E
-    A --> F
+    style A fill:#e1f5ff
+    style B fill:#f0f0f0
+    style C fill:#f0f0f0
+    style D fill:#f0f0f0
+    style E fill:#f0f0f0
+    style F fill:#f0f0f0
 ```
 
 ## Roles
