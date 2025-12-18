@@ -3,6 +3,10 @@
 ## Architecture Diagram
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 graph TB
     subgraph K8S["Kubernetes Cluster"]
         subgraph NODE["node01.udl.tf"]
