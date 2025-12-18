@@ -38,9 +38,9 @@ graph TB
         end
     end
 
-    style SHARED fill:#e1f5e1
-    style NODE fill:#f0f0f0
-    style K8S fill:#e3f2fd
+    style SHARED fill:#1a4d2e,stroke:#4ade80,stroke-width:2px,color:#fff
+    style NODE fill:#1e293b,stroke:#64748b,stroke-width:2px,color:#fff
+    style K8S fill:#1e3a8a,stroke:#60a5fa,stroke-width:2px,color:#fff
 ```
 
 ## Components
