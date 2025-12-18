@@ -23,13 +23,13 @@ graph TB
                 POD3["Custom TF2 Image"]
             end
 
-            RESTART -->|Manages| POD1
-            RESTART -->|Manages| POD2
-            RESTART -->|Manages| POD3
+            RESTART --> POD1
+            RESTART --> POD2
+            RESTART --> POD3
 
-            UPDATE -->|Manages| POD1
-            UPDATE -->|Manages| POD2
-            UPDATE -->|Manages| POD3
+            UPDATE --> POD1
+            UPDATE --> POD2
+            UPDATE --> POD3
 
             POD1 -.->|Mount| SHARED
             POD2 -.->|Mount| SHARED
