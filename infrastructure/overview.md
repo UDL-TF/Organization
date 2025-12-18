@@ -3,10 +3,6 @@
 ## Architecture Diagram
 
 ```mermaid
----
-config:
-  layout: elk
----
 graph TB
     subgraph K8S["Kubernetes Cluster"]
         subgraph NODE["node01.udl.tf"]
@@ -27,17 +23,17 @@ graph TB
                 POD3["Custom TF2 Image"]
             end
 
-            RESTART --> POD1
-            RESTART --> POD2
-            RESTART --> POD3
+            RESTART --> SERVER1
+            RESTART --> SERVER2
+            RESTART --> SERVER3
 
-            UPDATE --> POD1
-            UPDATE --> POD2
-            UPDATE --> POD3
+            UPDATE --> SERVER1
+            UPDATE --> SERVER2
+            UPDATE --> SERVER3
 
-            POD1 -.->|Mount| SHARED
-            POD2 -.->|Mount| SHARED
-            POD3 -.->|Mount| SHARED
+            SERVER1 -.->|Mount| SHARED
+            SERVER2 -.->|Mount| SHARED
+            SERVER3 -.->|Mount| SHARED
         end
     end
 
