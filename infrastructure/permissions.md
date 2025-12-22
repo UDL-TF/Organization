@@ -96,6 +96,16 @@ flowchart LR
 	MAP ---> CH_DEVT
 	AMB ---> CH_DEVT
 	OWN ---> CH_DEVT
+
+	classDef role fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#e0f2fe;
+	classDef channel fill:#111827,stroke:#f97316,stroke-width:2px,color:#ffedd5;
+	classDef cohort fill:#0f172a,stroke:#84cc16,stroke-width:2px,color:#ecfccb;
+	class OWN,STF,DEV,MAP role;
+	class CM,PM,SM,AMB cohort;
+	class CH_MAN,CH_STF,CH_DEV,CH_PROD,CH_DEVT channel;
+
+	%% Soften the contrast of the connecting lines for dark theme readability
+	linkStyle default stroke:#94a3b8,stroke-width:1.5px;
 ```
 
 ## Quick Reference Rules
