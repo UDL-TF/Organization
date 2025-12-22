@@ -39,7 +39,7 @@ The "management" umbrella referenced throughout the channels includes the follow
 ## Access Diagram
 
 ```mermaid
-flowchart TB
+flowchart LR
 	subgraph Roles
 		direction TB
 		OWN[Owners]
@@ -100,49 +100,52 @@ flowchart TB
 	OWN ---> CH_DEVT
 
 	classDef role fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#e0f2fe;
-	classDef channel fill:#0b1120,stroke:#fcd34d,stroke-width:2px,color:#fffbeb;
+	classDef channel fill:#020617,stroke:#facc15,stroke-width:2px,color:#fffbeb;
 	classDef cohort fill:#0f172a,stroke:#84cc16,stroke-width:2px,color:#ecfccb;
 	class OWN,STF,DEV,MAP role;
 	class CM,PM,SM,AMB cohort;
 	class CH_MAN,CH_STF,CH_DEV,CH_PROD,CH_DEVT channel;
 
 	%% Channel-colored connections for readability
-	linkStyle 0 stroke:#f97316,stroke-width:2px;
-	linkStyle 1 stroke:#f97316,stroke-width:2px;
-	linkStyle 2 stroke:#f97316,stroke-width:2px;
-	linkStyle 3 stroke:#f97316,stroke-width:2px;
-	linkStyle 4 stroke:#f97316,stroke-width:2px;
+	linkStyle 0 stroke:#fb923c,stroke-width:2px,curve:basis;
+	linkStyle 1 stroke:#fb923c,stroke-width:2px,curve:basis;
+	linkStyle 2 stroke:#fb923c,stroke-width:2px,curve:basis;
+	linkStyle 3 stroke:#fb923c,stroke-width:2px,curve:basis;
+	linkStyle 4 stroke:#fb923c,stroke-width:2px,curve:basis;
 
-	linkStyle 5 stroke:#a855f7,stroke-width:2px;
-	linkStyle 6 stroke:#a855f7,stroke-width:2px;
-	linkStyle 7 stroke:#a855f7,stroke-width:2px;
-	linkStyle 8 stroke:#a855f7,stroke-width:2px;
-	linkStyle 9 stroke:#a855f7,stroke-width:2px;
-	linkStyle 10 stroke:#a855f7,stroke-width:2px;
+	linkStyle 5 stroke:#c084fc,stroke-width:2px,curve:basis;
+	linkStyle 6 stroke:#c084fc,stroke-width:2px,curve:basis;
+	linkStyle 7 stroke:#c084fc,stroke-width:2px,curve:basis;
+	linkStyle 8 stroke:#c084fc,stroke-width:2px,curve:basis;
+	linkStyle 9 stroke:#c084fc,stroke-width:2px,curve:basis;
+	linkStyle 10 stroke:#c084fc,stroke-width:2px,curve:basis;
 
-	linkStyle 11 stroke:#0ea5e9,stroke-width:2px;
-	linkStyle 12 stroke:#0ea5e9,stroke-width:2px;
-	linkStyle 13 stroke:#0ea5e9,stroke-width:2px;
-	linkStyle 14 stroke:#0ea5e9,stroke-width:2px;
-	linkStyle 15 stroke:#0ea5e9,stroke-width:2px;
-	linkStyle 16 stroke:#0ea5e9,stroke-width:2px;
+	linkStyle 11 stroke:#38bdf8,stroke-width:2px,curve:basis;
+	linkStyle 12 stroke:#38bdf8,stroke-width:2px,curve:basis;
+	linkStyle 13 stroke:#38bdf8,stroke-width:2px,curve:basis;
+	linkStyle 14 stroke:#38bdf8,stroke-width:2px,curve:basis;
+	linkStyle 15 stroke:#38bdf8,stroke-width:2px,curve:basis;
+	linkStyle 16 stroke:#38bdf8,stroke-width:2px,curve:basis;
 
-	linkStyle 17 stroke:#22c55e,stroke-width:2px;
-	linkStyle 18 stroke:#22c55e,stroke-width:2px;
-	linkStyle 19 stroke:#22c55e,stroke-width:2px;
-	linkStyle 20 stroke:#22c55e,stroke-width:2px;
-	linkStyle 21 stroke:#22c55e,stroke-width:2px;
-	linkStyle 22 stroke:#22c55e,stroke-width:2px;
-	linkStyle 23 stroke:#22c55e,stroke-width:2px;
-	linkStyle 24 stroke:#22c55e,stroke-width:2px;
+	linkStyle 17 stroke:#34d399,stroke-width:2px,curve:basis;
+	linkStyle 18 stroke:#34d399,stroke-width:2px,curve:basis;
+	linkStyle 19 stroke:#34d399,stroke-width:2px,curve:basis;
+	linkStyle 20 stroke:#34d399,stroke-width:2px,curve:basis;
+	linkStyle 21 stroke:#34d399,stroke-width:2px,curve:basis;
+	linkStyle 22 stroke:#34d399,stroke-width:2px,curve:basis;
+	linkStyle 23 stroke:#34d399,stroke-width:2px,curve:basis;
+	linkStyle 24 stroke:#34d399,stroke-width:2px,curve:basis;
 
-	linkStyle 25 stroke:#e11d48,stroke-width:2px;
-	linkStyle 26 stroke:#e11d48,stroke-width:2px;
-	linkStyle 27 stroke:#e11d48,stroke-width:2px;
-	linkStyle 28 stroke:#e11d48,stroke-width:2px;
-	linkStyle 29 stroke:#e11d48,stroke-width:2px;
-	linkStyle 30 stroke:#e11d48,stroke-width:2px;
-	linkStyle 31 stroke:#e11d48,stroke-width:2px;
+	linkStyle 25 stroke:#fb7185,stroke-width:2px,curve:basis;
+	linkStyle 26 stroke:#fb7185,stroke-width:2px,curve:basis;
+	linkStyle 27 stroke:#fb7185,stroke-width:2px,curve:basis;
+	linkStyle 28 stroke:#fb7185,stroke-width:2px,curve:basis;
+	linkStyle 29 stroke:#fb7185,stroke-width:2px,curve:basis;
+	linkStyle 30 stroke:#fb7185,stroke-width:2px,curve:basis;
+	linkStyle 31 stroke:#fb7185,stroke-width:2px,curve:basis;
+
+	%% Gentle curve for any remaining default edges
+	linkStyle default stroke:#94a3b8,curve:basis;
 ```
 
 ## Quick Reference Rules
