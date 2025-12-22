@@ -8,6 +8,7 @@ flowchart LR
     A --> D[Community Managers]
     A --> E[Product Managers]
     A --> F[Server Managers]
+    A --> G[Mappers]
 ```
 
 ## Roles
@@ -20,6 +21,7 @@ flowchart LR
 | [Community Managers](./roles/community-managers.md) | Engage with and grow the community                                       |
 | [Product Managers](./roles/product-managers.md)     | Define product strategy and roadmap                                      |
 | [Server Managers](./roles/server-managers.md)       | Maintain server infrastructure and performance                           |
+| [Mappers](./roles/mappers.md)                       | Create custom maps that support gameplay variety                         |
 
 ---
 
