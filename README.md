@@ -23,6 +23,10 @@ flowchart LR
 | [Server Managers](./roles/server-managers.md)       | Maintain server infrastructure and performance                           |
 | [Mappers](./roles/mappers.md)                       | Create custom maps that support gameplay variety                         |
 
+## Communication Channels
+
+Channel access, audiences, and decision flows are outlined in the [Communication Channel Permissions](./infrastructure/permissions.md) guide.
+
 ---
 
 [View Infrastructure Documentation](./infrastructure/overview.md)
